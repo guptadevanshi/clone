@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylee.css">
+    <title>Amazon SignIn Page</title>
+</head>
+<body>
+    <section>
+        <div class="logo">
+            <img src="logo.png">
+            <span>.in</span>
+        </div>
+        <div class="card">
+            <h1>Create Account</h1><br>
+            <div class="form">
+                <label for="Name">Your Name</label> 
+                <input type="text" id="Name" placeholder="First and Last Name"> <br>
+                <label for="number">
+                    Mobile number
+                  </label>
+                <input type="number" id="number" maxlength="10" pattern="[1-9]{1}[0-9]{9}"> <br>
+                <label for="email">Email or mobile phone number</label>
+                <input type="text" id="email"> <br>
+                <label for="pass">Password</label>
+                <input type="password" id="pass" placeholder="At least 6 character"> <br>
+                <button>Login</button><br><br>
+            </div>
+            <div class="msg">Already have an account? <a href="login.html">Sign in</a></div><br>
+            <div class="msg">By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.</div><br>
+            <a href="#" class="icon">Need help?</a>
+        </div>
+        <div class="breck">
+            <p>New to Amazon</p>
+        </div>
+        <div class="btn">
+            <button class="create">Create your Amazon account</button>
+        </div>
+        <footer>
+            <br><div class="links">
+                <a href="#" class="footer-link">Conditions of Use</a>
+                <a href="#" class="footer-link">Privacy Notice</a>
+                <a href="#" class="footer-link">Help</a>
+            </div><br>
+            <p>© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+        </footer>
+    </section>
+    <script>
+        document.getElementById('number').addEventListener('input', function (event) {
+          // Remove non-digit characters
+          const inputValue = event.target.value.replace(/\D/g, '');
+    
+          // Restrict to 10 digits
+          const maxLength = 10;
+          const truncatedValue = inputValue.slice(0, maxLength);
+    
+          // Update the input value
+          event.target.value = truncatedValue;
+        });
+      </script>
+</body>
+</html>
